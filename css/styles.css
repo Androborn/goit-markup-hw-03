@@ -1,0 +1,414 @@
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --accent-color: #2196f3;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --primary-background-color: #f5f4fa;
+  --secondary-background-color: #2f303a;
+  --primary-font: 'roboto', sans-serif;
+  --secondary-font: 'relaway', sans-serif;
+  --section-vertical-padding: 94px;
+  --net-gap: 15px;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.19;
+  color: var(--primary-text-color);
+}
+
+/* =========UTILITIES========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.net-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--net-gap));
+  margin-bottom: calc(-1 * var(--net-gap));
+  margin-right: calc(-1 * var(--net-gap));
+  margin-left: calc(-1 * var(--net-gap));
+}
+
+.net-element {
+  overflow: hidden;
+  /* why no top-margin & penetrates container?
+  flex-basis: calc(100% / 3 - var(--net-gap)) */
+  margin-top: var(--net-gap);
+  margin-bottom: var(--net-gap);
+  margin-right: var(--net-gap);
+  margin-left: var(--net-gap);
+}
+/* =========END UTILITIES========== */
+
+/* ============HEADER============= */
+.header-section {
+  background-color: var(--white-color);
+  border-bottom: 1px solid #ececec;
+}
+
+.header-section > .container {
+  display: flex;
+}
+/* =============LOGO============= */
+.logo-header {
+  margin-right: 93px;
+}
+
+.logo-header,
+.logo-footer {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.logo-span {
+  color: var(--accent-color);
+}
+
+.logo-header-span {
+  color: var(--black-color);
+}
+
+.logo-footer-span {
+  color: var(--white-color);
+}
+/* =============END LOGO============= */
+
+/* ============NAVIGATION============== */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-site-item,
+.nav-contact-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.nav-site-item:not(:last-child),
+.nav-contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-site,
+.nav-contact {
+  display: flex;
+  margin-left: auto;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-site-link {
+  color: inherit;
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+.nav-contact-link {
+  color: var(--secondary-text-color);
+}
+
+.nav-site-link:hover,
+.nav-site-link:focus,
+.nav-contact-link:hover,
+.nav-contact-link:focus {
+  color: var(--accent-color);
+}
+/* ============END NAVIGATION============== */
+/* ============END HEADER============= */
+
+/* ==============HERO============== */
+.hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  background-color: var(--secondary-background-color);
+}
+
+.hero-title {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.hero-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* =============END HERO============== */
+
+/* =============FEATURES============ */
+.features-section {
+  padding-top: var(--section-vertical-padding);
+  padding-bottom: var(--section-vertical-padding);
+  background-color: var(--white-color);
+}
+
+.features-list {
+  display: flex;
+}
+
+.features-list-item {
+  flex-basis: calc(100% / 4);
+}
+
+.features-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-list-subtitle {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features-list-description {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+/* =============END FEATURES============ */
+
+/* =============WHAT WE DO=========== */
+.what-we-do-section {
+  padding-bottom: var(--section-vertical-padding);
+  background-color: var(--white-color);
+}
+
+.what-we-do-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.what-we-do-list {
+  display: flex;
+}
+
+.what-we-do-list-item {
+  flex-basis: calc(100% / 3);
+}
+
+.what-we-do-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+/* =============END WHAT WE DO=========== */
+
+/* =============TEAM============ */
+.team-section {
+  padding-top: var(--section-vertical-padding);
+  padding-bottom: var(--section-vertical-padding);
+  background-color: var(--primary-background-color);
+}
+
+.team-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-list-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
+}
+
+.team-card-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-subtitle {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.team-description {
+  font-size: 16px;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+/* =============END TEAM============ */
+
+/* =============FOOTER============= */
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--secondary-background-color);
+}
+
+.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+}
+.address {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.address-map {
+  color: #ffffff;
+}
+
+.address-mail,
+.address-tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-item {
+  margin-bottom: 9px;
+}
+.address-item .link:hover,
+.address-item .link:focus {
+  color: var(--accent-color);
+}
+/* =============END FOOTER============= */
+
+/* ============PORTFOLIO============ */
+.portfolio-section {
+  padding-top: var(--section-vertical-padding);
+  padding-bottom: var(--section-vertical-padding);
+  background-color: var(--white-color);
+}
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-filter-btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: inherit;
+  text-align: center;
+  background-color: var(--primary-background-color);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.portfolio-filter-btn:hover,
+.portfolio-filter-btn:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: var(--white-color);
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-works-subtitle {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-works-description {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--secondary-text-color);
+}
+/* ============END PORTFOLIO============ */
