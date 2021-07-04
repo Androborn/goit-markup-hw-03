@@ -12,7 +12,7 @@
   --set-gap: 30px;
 }
 
-/* Present in modern normalized */
+/* Present in modern normalize */
 html {
   box-sizing: border-box;
 }
@@ -22,6 +22,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
+/* Present in modern normalize */
 
 body {
   font-family: var(--primary-font);
